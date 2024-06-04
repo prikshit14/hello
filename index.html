@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <script>
+        function YesFunction() {
+    alert("Thank You MAM ");
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const movingButton = document.getElementById('movingButton');
+
+    // Function to move the button to a random position
+    function moveButton() {
+        const x = Math.random() * (window.innerWidth - movingButton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - movingButton.offsetHeight);
+        movingButton.style.left = `${x}px`;
+        movingButton.style.top = `${y}px`;
+    }
+
+    // Add an event listener to the button to move it when clicked
+    movingButton.addEventListener('click', moveButton);
+});
+
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chale Phir</title>
+     <style>
+        h1{
+  text-align: center;
+}
+
+  .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+  }
+  
+  .button1:hover {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    
+    top: 50%;
+}
+
+#movingButton {
+    position: absolute;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+     </style>
+</head>
+<body>
+     <h1>Can We Hang Out Sometime???</h1>
+      
+     
+     <img src="/image.jpg.gif" alt="#"   width="500" height="200" class="center">
+
+     <div class="wrapper">
+        <button  id="YES" class="button button1" onclick="YesFunction()" class="center">YES</button>
+        <button  id="movingButton" class="button button2" onclick="NoFunction()" class="center">NO</button> 
+ 
+    </div>
+           
+    
+</body>
+</html>
